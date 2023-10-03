@@ -1,5 +1,5 @@
 # SierpinskiDrawer
-JavaFX program that draws a Sierpinski Triangle point by point
+JavaFX program that draws a Sierpinski Triangle point by point <br>
 Build in June 2022
 
 - I have not been able to create a .jar file due to problems with IntelliJ, if you are able to create a .jar file let me know.
