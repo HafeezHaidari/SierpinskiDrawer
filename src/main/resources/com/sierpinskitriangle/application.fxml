@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.canvas.Canvas?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Slider?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1240.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.sierpinskitriangle.paintController">
+   <children>
+      <HBox prefHeight="38.0" prefWidth="800.0" spacing="20.0">
+         <children>
+            <Button fx:id="clearButton" mnemonicParsing="false" onAction="#clearCanvas" text="Clear Canvas" translateX="10.0" translateY="8.0" />
+            <ColorPicker fx:id="colorPicker" prefHeight="25.0" prefWidth="140.0" translateX="5.0" translateY="8.0">
+               <value>
+                  <Color />
+               </value></ColorPicker>
+            <Button fx:id="triangleCreateButton" mnemonicParsing="false" onAction="#createSierpinskiTriangle" text="Create Sierpinski Triangle" translateX="2.0" translateY="8.0">
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </Button>
+            <TextField fx:id="scale" prefHeight="25.0" prefWidth="195.0" translateX="5.0" translateY="8.0" />
+         </children>
+      </HBox>
+      <VBox layoutX="217.0" layoutY="509.0" prefHeight="27.0" prefWidth="366.0" />
+      <Canvas fx:id="canvas" height="610.0" layoutX="49.0" layoutY="55.0" style="-fx-background-color: lightgray;" width="1142.0">
+         <cursor>
+            <Cursor fx:constant="CROSSHAIR" />
+         </cursor></Canvas>
+      <Slider fx:id="drawSpeedSlider" blockIncrement="1.0" layoutX="452.0" layoutY="679.0" onDragDone="#setDrawSpeed" onMouseReleased="#setDrawSpeed" prefHeight="27.0" prefWidth="336.0" />
+   </children>
+</Pane>
